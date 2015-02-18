@@ -23,3 +23,7 @@ cf-cli/cf-linux-amd64.tgz:
   object_id: 82d8f5dc-871e-4b19-b9ba-3dc0a69fc8e1
   sha: f2e135bf6f30a95b8b6aafe36513a72f7aaf37c3
   size: 4775798
+windows_app_lifecycle/windows_app_lifecycle.tgz:
+  object_id: 00146d49-2721-4120-b63a-166e36899c45
+  sha: c4d74905ea677284c95c91c10138ff3ad4f66319
+  size: 819558
