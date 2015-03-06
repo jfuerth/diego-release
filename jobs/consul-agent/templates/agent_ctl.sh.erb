@@ -47,12 +47,12 @@ EOF
     ulimit -v unlimited
 
     # add consul agent's dns to resolv.conf
-    #
-    # /etc/resolv.conf will probably be regenerated all the time, so add the
-    # local dns server to /head, which will be prepended when regenerated.
-    echo 'nameserver 127.0.0.1' > /etc/resolvconf/resolv.conf.d/head
 
+    # if resolvconf is installed, /etc/resolv.conf will be regenerated all
+    # the time, so add the local dns server to /head, which will be prepended
+    # when regenerated.
     if resolvconf --updates-are-enabled; then
+      echo 'nameserver 127.0.0.1' > /etc/resolvconf/resolv.conf.d/head
       resolvconf -u
     else
       # updates are disabled in bosh-lite; in this case just add to
